@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear-Web</title>
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/css/image.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="bear-description">
+        <div class="row">
+
+            <div class="column" id="image">
+                <form action="/predict" method="post" enctype="multipart/form-data">
+                    <input type="file" id="file" accept="image/*" hidden name="image">
+                    <div class="img-area" data-img="">
+                        <i class='bx bxs-cloud-upload icon'></i>
+                        <h3>Envie uma Imagem</h3>
+                        {{ img_inf|safe }}
+                    </div>
+                   
+                    <button class="select-image" type="button">Selecione imagem</button>
+                    <br>
+                    <input type="submit" value="ENVIAR" class="select-image">
+                </form>
+            </div>
+
+            <div class="column" id="txt-bear">
+                <h1 id="species">{{ prediction }}</h1>
+                <h2 id="about">{{ about }}</h2>
+                <p id="description">
+                    {{ description|safe }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
