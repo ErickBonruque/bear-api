@@ -1,0 +1,10 @@
+flask
+render_template
+request
+cv2
+fastai
+numpy
+io
+PIL
+base64
+gunicorn
