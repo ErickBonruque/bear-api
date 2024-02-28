@@ -1,0 +1,6 @@
+flask
+opencv-python
+fastai
+numpy
+Pillow
+gunicorn
